@@ -8,7 +8,7 @@ public class Main {
     // Print the copied array
     printArray(copyTo);
     // Check if the two arrays are equal
-    System.out.println(java.util.Arrays.equals(copyFrom, copyTo));
+    System.out.println("Are two arrays equal? " + java.util.Arrays.equals(copyFrom, copyTo));
   }
 
   // Generic print method for any type of array

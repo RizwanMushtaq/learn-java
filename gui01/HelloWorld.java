@@ -18,12 +18,15 @@ public class HelloWorld extends Application {
     primaryStage.setTitle("Hello World!");
     Button btn = new Button();
     btn.setText("Say 'Hello World'");
-    btn.setOnAction(new EventHandler<ActionEvent>() {
-      @Override
-      public void handle(ActionEvent event) {
-        System.out.println("Hello World!");
-      }
-    });
+    /*
+     * Using an anonymous inner class to handle the button click event
+     * btn.setOnAction(new EventHandler<ActionEvent>() {
+     * 
+     * @Override public void handle(ActionEvent event) {
+     * System.out.println("Hello World!"); } });
+     */
+    // Using a lambda expression to handle the button click event
+    btn.setOnAction(event -> System.out.println("Hello World!"));
     StackPane root = new StackPane();
     root.getChildren().add(btn);
     primaryStage.setScene(new Scene(root, 300, 250));

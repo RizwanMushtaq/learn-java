@@ -5,8 +5,9 @@ package Bicycles;
 public class Main {
   public static void main(String[] args) {
     System.out.println("Creating a MountainBike object...");
-    MountainBike myBike = new MountainBike(10, 2, 30, 1);
-    System.out.println("Seat Height: " + myBike.getHeight());
+    MountainBike myBike = new MountainBike(10, 2, 30,
+        "high");
+    myBike.printDescription();
   }
 }
 
@@ -14,10 +15,11 @@ class Bicycle {
   private int cadence;
   private int gear;
   private int speed;
-  private int id;
+  private final int id;
   private static int numberOfBicycles = 0;
 
-  public Bicycle(int startCadence, int startSpeed, int startGear) {
+  public Bicycle(int startCadence, int startSpeed,
+      int startGear) {
     gear = startGear;
     cadence = startCadence;
     speed = startSpeed;
@@ -59,21 +61,36 @@ class Bicycle {
   public void speedUp(int increment) {
     speed += increment;
   }
+
+  public void printDescription() {
+    System.out.println("Bike is in gear " + this.gear
+        + " with a cadence of " + this.cadence
+        + " and travelling at a speed of " + this.speed
+        + ". ");
+  }
 }
 
 class MountainBike extends Bicycle {
-  private int seatHeight;
+  private String suspension;
 
-  public MountainBike(int startHeight, int startCadence, int startSpeed, int startGear) {
+  public MountainBike(int startCadence, int startSpeed,
+      int startGear, String suspensionType) {
     super(startCadence, startSpeed, startGear);
-    seatHeight = startHeight;
+    this.suspension = suspensionType;
   }
 
-  public void setHeight(int newValue) {
-    seatHeight = newValue;
+  public String getSuspension() {
+    return this.suspension;
   }
 
-  public int getHeight() {
-    return seatHeight;
+  public void setSuspension(String suspensionType) {
+    this.suspension = suspensionType;
+  }
+
+  @Override
+  public void printDescription() {
+    super.printDescription();
+    System.out.println("The " + "MountainBike has a "
+        + getSuspension() + " suspension.");
   }
 }

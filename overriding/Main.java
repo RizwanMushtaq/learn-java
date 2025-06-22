@@ -1,3 +1,5 @@
+package overriding;
+
 class Animal {
   public static void testClassMethod() {
     System.out.println("The static method in Animal");

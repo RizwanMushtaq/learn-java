@@ -1,7 +1,7 @@
 public class HelloWorld {
-    public static void main(String[] args) {
+    public static void main(String[] arguments) {
         String message = "Hallo World";
-        System.out.println(message);
-        System.out.println("It's me, Rizwan here");
+        System.out.print(message);
+        System.out.print("It's me, Rizwan here");
     }
 }

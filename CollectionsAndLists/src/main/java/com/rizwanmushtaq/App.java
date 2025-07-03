@@ -11,7 +11,15 @@ public class App {
     list.add("Apple");
     list.add("Banana");
     System.out.println("List contents: " + list);
+    collectionsClassOperations(list);
+  }
+
+  private static void collectionsClassOperations(List<String> list) {
+    // Sorting the list using Collections.sort() It sorts the list in natural order
     Collections.sort(list);
     System.out.println("Sorted list: " + list);
+    // Reverse the list using Collections.reverse()
+    Collections.reverse(list);
+    System.out.println("Reversed list: " + list);
   }
 }

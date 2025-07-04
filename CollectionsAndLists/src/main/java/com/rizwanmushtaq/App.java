@@ -18,6 +18,7 @@ public class App {
     books.add(new Book("Design Patterns", "Erich Gamma", 1994, "978-0201633610", 50.00, "Addison-Wesley"));
     printBooks("original", books);
     collectionsOperationsOnBooks(books);
+    listOperationsOnBooks(books);
   }
 
   private static void collectionsOperationsOnStrings(List<String> list) {
@@ -35,6 +36,18 @@ public class App {
     printBooks("Sorting the books by year published", books);
     // Sorting the books by price
     Collections.sort(books, (b1, b2) -> Double.compare(b1.getPrice(), b2.getPrice()));
+    printBooks("Sorting the books by price", books);
+  }
+
+  private static void listOperationsOnBooks(List<Book> books) {
+    // Sorting the books by name
+    books.sort((b1, b2) -> b1.getName().compareTo(b2.getName()));
+    printBooks("Sorting the books by name", books);
+    // Sorting the books by author
+    books.sort((b1, b2) -> b1.getAuthor().compareTo(b2.getAuthor()));
+    printBooks("Sorting the books by author", books);
+    // Sorting the books by price
+    books.sort((b1, b2) -> Double.compare(b1.getPrice(), b2.getPrice()));
     printBooks("Sorting the books by price", books);
   }
 

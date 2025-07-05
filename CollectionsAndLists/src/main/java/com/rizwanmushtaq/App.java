@@ -1,5 +1,7 @@
 package com.rizwanmushtaq;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -8,7 +10,17 @@ public class App {
 //    collectionsOperationsOnStrings();
 //    collectionsOperationsOnBooks();
 //    listOperationsOnBooks();
-    treeSetOperations();
+//    treeSetOperations();
+    hashMapOperations();
+  }
+
+  private static void hashMapOperations() {
+    Map<String, Integer> scores = new HashMap<>();
+    scores.put("Alice", 85);
+    scores.put("Bob", 90);
+    scores.put("Charlie", 78);
+    System.out.println(scores);
+    System.out.println(scores.get("Bob"));
   }
 
   private static void treeSetOperations() {

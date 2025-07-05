@@ -67,6 +67,26 @@
     "settings.editor.selected.configurable": "actions.on.save"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rizwanmushtaq.App" />
+      <module name="CollectionsAndLists" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rizwanmushtaq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="db309a09-0fbb-48f8-b830-61bc025935f3" name="Changes" comment="" />
@@ -99,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751632954234</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="updated collections concepts">
+      <option name="closed" value="true" />
+      <created>1751633478912</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1751633478912</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

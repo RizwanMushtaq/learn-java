@@ -1,9 +1,10 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class Main {
   public static void main(String[] args) {
-    List<String> names = Arrays.asList("Zaid","John","Alice", "Bob", "Charlie",
+    List<String> names = Arrays.asList("Zaid", "John", "Alice", "Bob", "Charlie",
         "David");
     printNamesWithA(names);
     printNamesWithLimit2(names);
@@ -23,6 +24,8 @@ public class Main {
     System.out.println("--- Limited Names ---");
     List<String> limitedNames =
         names.stream()
+            .sorted()
+            .skip(3)
             .limit(2)
             .collect(Collectors.toList());
     limitedNames.forEach(System.out::println);

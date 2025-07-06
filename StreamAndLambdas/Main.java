@@ -2,13 +2,20 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@FunctionalInterface
+interface Greeting {
+  void greet(String name);
+}
+
 public class Main {
   public static void main(String[] args) {
     List<String> names = Arrays.asList("Zaid", "John", "Alice", "Bob", "Charlie",
         "David");
-    printNamesWithA(names);
-    printNamesWithLimit2(names);
-    printNamesWithSorted(names);
+//    printNamesWithA(names);
+//    printNamesWithLimit2(names);
+//    printNamesWithSorted(names);
+    Greeting greeting = (name) -> System.out.println("Hello, " + name + "!");
+    greeting.greet("Alice");
   }
 
   public static void printNamesWithA(List<String> names) {

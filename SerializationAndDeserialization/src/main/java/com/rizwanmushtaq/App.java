@@ -1,12 +1,42 @@
 package com.rizwanmushtaq;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 public class App {
   public static void main(String[] args) {
+    writeAFile();
+    writeUsingFileWriter();
+  }
+
+  private static void writeUsingFileWriter() {
+    System.out.println("Writing using FileWriter!");
+    String filePath = "exampleFileWriter.txt";
+    try {
+      FileWriter fileWriter = new FileWriter(filePath);
+      String content = "Hello, World! Rizwan Mushtaq";
+      fileWriter.write(content);
+      fileWriter.close();
+      System.out.println("File written successfully!");
+    } catch (Exception exception) {
+      exception.printStackTrace();
+    }
+  }
+
+  private static void writeAFile() {
+    System.out.println("Writing a file!");
+    String filePath = "exampleFileOutputStream.txt";
+    try {
+      FileOutputStream fileOutputStream = new FileOutputStream(filePath);
+      String content = "Hello, World!";
+      fileOutputStream.write(content.getBytes());
+      fileOutputStream.close();
+      System.out.println("File written successfully!");
+    } catch (Exception exception) {
+      exception.printStackTrace();
+    }
+  }
+
+  private static void serializePerson() {
     System.out.println("Serialization And De-Serialization!");
     Person person1 = new Person("John Doe", 30);
     Person person2 = new Person("Jane Smith", 25);

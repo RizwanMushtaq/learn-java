@@ -4,8 +4,23 @@ import java.io.*;
 
 public class App {
   public static void main(String[] args) {
-    writeAFile();
-    writeUsingFileWriter();
+    readFileUsingFileReader();
+  }
+
+  private static void readFileUsingFileReader() {
+    System.out.println("Reading a file using FileReader!");
+    String filePath = "exampleFileWriter.txt";
+    try {
+      FileReader fileReader = new FileReader(filePath);
+      BufferedReader bufferedReader = new BufferedReader(fileReader);
+      String line;
+      while ((line = bufferedReader.readLine()) != null) {
+        System.out.print(line);
+      }
+      fileReader.close();
+    } catch (Exception exception) {
+      exception.printStackTrace();
+    }
   }
 
   private static void writeUsingFileWriter() {

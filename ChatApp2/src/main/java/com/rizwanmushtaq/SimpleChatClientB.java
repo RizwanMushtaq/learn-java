@@ -8,12 +8,12 @@ import java.net.InetSocketAddress;
 import java.nio.channels.Channels;
 import java.nio.channels.SocketChannel;
 
-public class SimpleChatClientA {
+public class SimpleChatClientB {
   private PrintWriter printWriter;
   private JTextField textField;
 
   public static void main(String[] args) {
-    SimpleChatClientA client = new SimpleChatClientA();
+    SimpleChatClientB client = new SimpleChatClientB();
     client.go();
   }
 

@@ -1,4 +1,4 @@
-package com.rizwanmushtaq;
+package com.rizwanmushtaq.concepts;
 
 public class MyRunnable implements Runnable {
   public void run() {

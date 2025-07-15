@@ -1,4 +1,4 @@
-package com.rizwanmushtaq;
+package com.rizwanmushtaq.concepts;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
